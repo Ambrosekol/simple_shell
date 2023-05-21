@@ -5,7 +5,7 @@
  * @progname: pointer to program name
  * Return: int of status for success or fail
  */
-extern char environ**;
+extern char **environ;
 
 int execfun(char **args, char *progname)
 {
