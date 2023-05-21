@@ -19,8 +19,8 @@ void handleBatchMode(char *argv[])
 	{
 		command[strcspn(command, "\n")] = '\0';
 		status = execute_command(command, argv[0]);
-		if (status == -1)
-			printf("%s: I say no such file exist.\n", argv[0]);
+		/**if (status == -1)
+			printf("%s: I say no such file exist.\n", argv[0]); **/
 		free(command);
 		exit(127);
 	}
