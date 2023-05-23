@@ -18,7 +18,12 @@ This is a simple shell implementation written in C. The shell provides a basic c
 ### Run the shell
      $ ./simple_shell
 ### You can now start entering commands in the shell and explore its features.
-
+### File broken down into different segments
+- Code for handling parent functions
+- Interactive function
+- Child processing
+- Command execution
+- Error printing was handled using errno
 # Usage
 
 ## The shell supports the following features and commands:
