@@ -5,13 +5,11 @@
  * @progname: pointer to program name
  * Return: int of status for success or fail
  */
-extern char **environ;
-
 int execfun(char **args, char *progname)
 {
 	int status;
 	char path[20] = PATH;
-	
+
 	/**strcpy(path, PATH);**/
 	if ((int) strcspn(args[0], "/") == 0)
 	{

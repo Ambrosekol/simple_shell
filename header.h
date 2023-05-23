@@ -16,4 +16,5 @@ void handleInteractiveMode(char *argv[]);
 void handleBatchMode(char *argv[]);
 int execute_child_process(char **args, char *progname);
 int wait_child_process(pid_t pid);
+extern char **environ;
 #endif

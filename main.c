@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 		printf("Usage: %s [file]\n", argv[0]);
 		return (1);
 	}
+
 	if (isatty(STDIN_FILENO))
 	{
 		handleInteractiveMode(argv);
