@@ -26,6 +26,6 @@ void handleBatchMode(char *argv[])
 				token = strtok(NULL, "\n");
 			}
 		}
-			exit(127);
+	exit(127);
 	free(command);
 }
