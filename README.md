@@ -15,6 +15,8 @@ This is a simple shell implementation written in C. The shell provides a basic c
 ### Compile the source code:
      $ cd simple-shell
      $ gcc -Wall -Werror -Wextra -pedantic *.c -o simple_shell
+### Give Simple_shell execute permission using this command
+     $ chmod 755 Simple_shell
 ### Run the shell
      $ ./simple_shell
 ### You can now start entering commands in the shell and explore its features.
