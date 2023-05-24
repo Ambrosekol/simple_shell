@@ -18,7 +18,7 @@ void handleInteractiveMode(char *argv[])
 		/**printf("error in malloc\n");**/
 	while (1)
 	{
-		printf("$ ");
+		printf("($) ");
 		wrdcnt = getline(&command, &wrn, stdin);
 		if (wrdcnt <= 0)
 		{
