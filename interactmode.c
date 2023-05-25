@@ -19,8 +19,7 @@ void handleInteractiveMode(char *argv[])
 	while (1)
 	{
 		printf("$ ");
-		while ((wrdcnt = getline(&command, &wrn, stdin)) != EOF)
-		{
+		wrdcnt = getline(&command, &wrn, stdin);
 			if (wrdcnt <= 0)
 			{
 				printf("\n");
@@ -35,7 +34,6 @@ void handleInteractiveMode(char *argv[])
 				/**status = **/
 				execute_command(command, argv[0]);
 			}
-		}
 	}
 	free(command);
 }

@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (isatty(STDIN_FILENO) != 1)
+	if (isatty(STDIN_FILENO))
 	{
 		handleInteractiveMode(argv);
 	}
