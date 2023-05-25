@@ -10,7 +10,6 @@ int execfun(char **args, char *progname)
 	int status;
 	char path[20] = PATH;
 
-	/**strcpy(path, PATH);**/
 	if ((int) strcspn(args[0], "/") == 0)
 	{
 		status = execve(args[0], args, environ);

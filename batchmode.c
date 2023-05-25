@@ -6,25 +6,15 @@
  */
 void handleBatchMode(char *argv[])
 {
-	char *command;
-	char *token;
-	/**size_t wrn;**/
+	char *command = NULL;
+	size_t token = 0;
+	ssize_t wrn;
 	/**int status;**/
 
 	/**wrn = 0;**/
-		command = malloc(1024);
-		if (command == NULL)
-			printf("error in malloc\n");
-
-		while (fgets(command, sizeof(command), stdin) != NULL)
-		{
-			token = strtok(command, "\n");
-			while (token != NULL)
-			{
-				token[strcspn(token, "\n")] = '\0';
-				execute_command(token, argv[0]);
-				token = strtok(NULL, "\n");
-			}
-		}
+	while ((wrn = getline(&command, &token, stdin)) != -1)
+	{
+		execute_command(command, argv[0]);
+	}
 	free(command);
 }
