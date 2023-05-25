@@ -14,11 +14,14 @@ void handleBatchMode(char *argv[])
 	/**wrn = 0;**/
 	while ((wrn = getline(&command, &token, stdin)) != -1)
 	{
-		if (strcmp(command, "exit") == 0)
+		if (strcmp(command, "exit\n") == 0)
 		{
-			return (0);
+			break;
 		}
-		execute_command(command, argv[0]);
+		else
+		{
+			execute_command(command, argv[0]);
+		}
 	}
 	free(command);
 }
