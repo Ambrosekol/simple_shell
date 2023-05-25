@@ -9,7 +9,7 @@ void handleBatchMode(char *argv[])
 	char *command = NULL;
 	size_t token = 0;
 	ssize_t wrn;
-	int exitstatus;
+/**	int exitstatus;**/
 	/**int status;**/
 
 	/**wrn = 0;**/
@@ -22,7 +22,7 @@ void handleBatchMode(char *argv[])
 		else
 		{
 			exitstatus = execute_command(command, argv[0]);
-			exit(exitstatus);
+		/**	exit(exitstatus);**/
 		}
 	}
 	free(command);
