@@ -21,7 +21,8 @@ void handleBatchMode(char *argv[])
 		}
 		else
 		{
-			exitstatus = execute_command(command, argv[0]);
+			/**exitstatus = **/
+			execute_command(command, argv[0]);
 		/**	exit(exitstatus);**/
 		}
 	}
