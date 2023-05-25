@@ -27,6 +27,7 @@ int execfun(char **args, char *progname)
 		{
 			fprintf(stderr, "%s: %d: %s: not found\n", progname, errno, args[0]);
 			fflush(stderr);
+			exit(127);
 		}
 		else
 			perror("execve");
