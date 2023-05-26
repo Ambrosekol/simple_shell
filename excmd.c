@@ -24,9 +24,14 @@ int execute_command(char *command, char *progname)
 	args[i] = NULL;
 	if (args[0] == NULL)
 		return (0);
-	if (strcspn(args[0], "exit") == 0)
+	if (strcmp(args[0], "exit") == 0)
 	{
-		exit((int) *args[1]);
+		exit_status = 0;
+		if (args[1] != NULL)
+		{
+			exit_status = atoi(args[1]);
+		}
+		_exit(exit_status);
 	}
 	pid = execute_child_process(args, progname);
 	if (pid == -1)
