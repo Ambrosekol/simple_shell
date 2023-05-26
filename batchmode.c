@@ -15,7 +15,8 @@ void handleBatchMode(char *argv[])
 	/**wrn = 0;**/
 	while ((wrn = getline(&command, &token, stdin)) != -1)
 	{
-		if (strcmp(command, "exit\n") == 0)
+		command[strcspn(command, "\n")] = '\0';
+		if (strcmp(command, "exit") == 0)
 		{
 			break;
 		}
