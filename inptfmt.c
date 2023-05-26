@@ -14,6 +14,10 @@ int execfun(char **args, char *progname)
 	{
 		status = execve(args[0], args, environ);
 	}
+	else if ((int) strcspn(args[0], ".") == 0)
+	{
+		status = execve(args[0], args, environ);
+	}
 	else
 	{
 		strcat(path, "/");
